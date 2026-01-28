@@ -1,0 +1,54 @@
+server:
+  port: 8080
+  host: 0.0.0.0
+  timeout: 5s
+  dbtype: mysql # 数据库类型：mysql, sqlite
+
+logs:
+  level: info # 日志级别：debug, info, warn, error
+  # 日志格式：json 或 text
+  format: json
+  # 日志目录
+  # 是否输出到文件
+  file: true
+  dir: logs/
+  # 日志输出到控制台
+  console: true
+  # 日志轮转配置
+  lumberjack:
+    # 是否开启日志轮转
+    rotate: true
+    # 日志文件名
+    filename: logs/openCMD.log
+    # 日志文件最大大小（MB）
+    maxsize: 100
+    # 保留的最大备份日志文件数
+    maxbackups: 7
+    # 保留的最大日志文件天数
+    maxage: 7
+    # 是否压缩旧的日志文件
+    compress: true
+
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: 123456
+  dbname: openCMD
+
+sqlite:
+  filename: openCMD.db
+
+tencent:
+  appid: 123456
+  appkey: 123456
+
+aws:
+  region: us-east-1
+  accesskey: 123456
+  secretkey: 123456
+
+aliyun:
+  region: cn-beijing
+  accesskey: 123456
+  secretkey: 123456
